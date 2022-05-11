@@ -1,0 +1,2 @@
+# MagicalWechat
+A magical wechat
