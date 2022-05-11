@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>fileicon_txt </title>
+    <desc>Created with Sketch.</desc>
+    <g id="fileicon_txt-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M35,38.6666667 C35,39.4030463 34.4030463,40 33.6666667,40 L6.33333333,40 C5.59695367,40 5,39.4030463 5,38.6666667 L5,1.33333333 C5,0.596953667 5.59695367,-9.74952274e-16 6.33333333,0 L25,0 L35,10 L35,38.6666667 Z" id="Combined-Shape" fill="#F2F2F2"></path>
+        <path d="M35,10 L26.3333333,10 C25.5969537,10 25,9.40304633 25,8.66666667 L25,0 L25,0 L35,10 Z" id="Rectangle" fill="#000000" opacity="0.100000001"></path>
+        <g id="Group-2" transform="translate(9.066667, 18.000000)" fill="#000000" opacity="0.300000012">
+            <rect id="Rectangle-4" x="0.266666667" y="0" width="19.3333333" height="1.33333333"></rect>
+            <rect id="Rectangle-4" x="0.266666667" y="5.33333333" width="19.3333333" height="1.33333333"></rect>
+            <rect id="Rectangle-4" x="0.266666667" y="10.6666667" width="10.6666667" height="1.33333333"></rect>
+        </g>
+    </g>
+</svg>

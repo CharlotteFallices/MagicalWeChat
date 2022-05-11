@@ -1,0 +1,198 @@
+<metainfo prefix="MM" filename="MMPay" magic="1000">
+    <struct name="TenPayRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="CgiCmd" type="uint32" id="2" />
+        <field name="OutPutType" type="uint32" id="3" />
+        <field name="ReqText" type="SKBuiltinBuffer_t" id="4" />
+        <field name="ReqTextWx" type="SKBuiltinBuffer_t" id="5" required="0" />
+    </struct>
+
+    <struct name="TenPayResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+		<field name="RetText"   type="SKBuiltinBuffer_t" id="2" />
+		<field name="PlatRet"   type="int32" id="3" />
+		<field name="PlatMsg"   type="*char" referto="strlen" id="4" />
+        <field name="CgiCmdid"   type="int32" id="5" />
+		<field name="TenpayErrType"   type="int32" id="6" required="0" />
+		<field name="TenpayErrMsg"   type="*char" referto="strlen" id="7" required="0" />
+    </struct>
+
+    <struct name="PayQueryUserRollRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="Limit" type="uint32" id="2" />
+        <field name="Offset" type="uint32" id="3" />
+        <field name = "Extbuf" type = "*char" required = "0" referto = "strlen" id = "4"/>
+    </struct>
+    <struct name="SimpleProduct">
+        <field name = "ThumbUrl" type = "*char" referto = "strlen" id = "1" required = "0"/>
+        <field name = "ProductName" type = "*char" referto = "strlen" id = "2" required = "0"/>
+    </struct>
+
+    <struct name="PaySimpleUserRoll">
+        <field name="Transid" type="*char" referto="strlen" id="1" />
+        <field name="TotalFee" type="int32" id="2" />
+        <field name="GoodsName" type="*char" referto="strlen" id="3" />
+        <field name="CreateTime" type="uint32" id="4" />
+        <field name="TradeStateName" type="*char" referto="strlen" id="5" />
+        <field name="ModifyTime" type="uint32" id="6" />
+        <field name="FeeType" type="*char" referto="strlen" id="7" required="0" />
+        <field name="StatusType" type="int32" id="8" required="0" />
+        <field name = "PayType" type = "uint32" id = "9" required = "0"/>
+        <field name="IapTotalFee" type="*char" referto="strlen" id="10" required="0" /> 
+        <field name="AppName" type = "*char" referto="strlen" id = "11" required = "0"/>
+        <field name="AppNickName" type = "*char" referto="strlen" id = "12" required = "0"/>
+        <field name="AppThumbUrl" type = "*char" referto="strlen" id = "13" required = "0"/>
+        <field name="StatusHead" type = "*char" referto = "strlen" id = "14" required = "0"/>
+        <field name="StatusBody" type = "*char" referto = "strlen" id = "15" required = "0"/>
+        <field name="ProductCount" type = "uint32" id = "16" required = "0"/>
+        <field name="Products" type = "*SimpleProduct" referto = "ProductCount" id = "17" required = "0"/>
+    </struct>
+
+    <struct name="PayQueryUserRollResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+        <field name="TotalNum" type="uint32" id="2" />
+        <field name="RecNum" type="uint32" id="3" />
+        <field name="UserRollList" type="*PaySimpleUserRoll" referto="RecNum" id="4" />
+        <field name = "Extbuf" type = "*char" required = "0" referto = "strlen" id = "5"/>
+    </struct>
+
+    <struct name="PayDelUserRollRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="DelType" type="uint32" id="2" /> <!-- 1 del transid; 2 del all, ignore transid -->
+        <field name="Transid" type="*char" referto="strlen" id="3" />
+        <field name = "PayType" type = "uint32" id = "4" required = "0"/> <!-- 1 mmpay 2 iappay -->
+    </struct>
+
+    <struct name="PayDelUserRollResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+    </struct>
+
+    <struct name="PayAuthAppRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="AppId" type="*char" referto="strlen" id="2" />
+        <field name="PartnerId" type="*char" referto="strlen" id="3"/>
+        <field name="PrepayId" type="*char" referto="strlen" id="4"/>
+        <field name="NonceStr" type="*char" referto="strlen" id="5"/>
+        <field name="TimeStamp" type="*char" referto="strlen" id="6"/>
+        <field name="Package" type="*char" referto="strlen" id="7"/>
+        <field name="Sign" type="*char" referto="strlen" id="8"/>
+        <field name="SignType" type="*char" referto="strlen" id="9"/>
+    </struct>
+
+    <struct name="PayAuthAppResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+        <field name="AppSource" type="*char" referto="strlen" id="2"/>
+        <field name="ErrCode" type="int32" id="3" required="0"/>
+        <field name="ErrMsg" type="*char" referto="strlen" id = "4" required="0"/>
+        <field name="PrepayId" type="*char" referto="strlen" id="5" required="0"/>
+    </struct>
+
+    <struct name="GenPrepayRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="AppId" type="*char" referto="strlen" id="2" />
+        <field name="NonceStr" type="*char" referto="strlen" id="3" />
+        <field name="Timestamp" type="*char" referto="strlen" id="4" />
+        <field name="Package" type="*char" referto="strlen" id="5" />
+        <field name="Sign" type="*char" referto="strlen" id="6" />
+        <field name="SignType" type="*char" referto="strlen" id="7" />
+        <field name="WebViewUrl" type="*char" referto="strlen" id="8" required="0" />
+        <field name="ContactAppUsername" type="*char" referto="strlen" id="9" required="0" />
+        <field name="Channel" type="int32" id="10" required="0" />
+        <field name="ExtInfo" type="*char" referto="strlen" id="11" required="0" />
+    </struct>
+
+    <struct name="GenPrepayResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+        <field name="PrepayId" type="*char" referto="strlen" id="2" /> 
+        <field name="AppSource" type="*char" referto="strlen" id="3"/>
+        <field name="ErrCode" type="int32" id="4" required="0"/>
+        <field name="ErrMsg" type="*char" referto="strlen" id = "5" required="0"/>
+   </struct>
+
+    <struct name="CancelQRPayRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="QrUuid" type="*char" referto="strlen" id="2" />
+        <field name="ReqKey" type="*char" referto="strlen" id="3" />
+    </struct>
+
+    <struct name="CancelQRPayResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+    </struct>
+
+    <struct name="PaySubscribeRequest">
+        <field name="BaseRequest" type="BaseRequest" id="1" />
+        <field name="AppServiceUserName" type="*char" referto="strlen" id="2" />
+        <field name="TransactionId" type="*char" referto="strlen" id="3" required="0"/>
+    </struct>
+
+    <struct name="PaySubscribeResponse">
+        <field name="BaseResponse" type="BaseResponse" id="1" />
+    </struct>
+
+    <struct name = "CheckPayJsapiRequest">
+		<field name = "BaseRequest" type="BaseRequest" id="1" />
+        <field name="AppId" type="*char" referto="strlen" id="2" />
+        <field name="NonceStr" type="*char" referto="strlen" id="3" />
+        <field name="Timestamp" type="*char" referto="strlen" id="4" />
+        <field name="Package" type="*char" referto="strlen" id="5" />
+        <field name="Sign" type="*char" referto="strlen" id="6" />
+        <field name="SignType" type="*char" referto="strlen" id="7" />
+        <field name="WebViewUrl" type="*char" referto="strlen" id="8" />
+        <field name="JsApiScene" type="uint32" id="9" />
+    </struct>
+    <struct name = "CheckPayJsapiResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+        <field name="ErrCode" type="int32" id="2" />
+        <field name="ErrMsg" type="*char" referto="strlen" id = "3" />
+    </struct>
+    <struct name = "EvaluateOrderRequest">
+		<field name = "BaseRequest" type="BaseRequest" id="1" />
+        <field name = "TransId" type = "*char" referto = "strlen" id = "2"/>
+        <field name = "AppId" type = "*char" referto = "strlen" id = "3"/>
+        <field name = "Value" type = "int32" id = "4"/>
+    </struct>
+    <struct name = "EvaluateOrderResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+        <field name = "RetCode" type = "int32" id = "2" required = "0"/>
+        <field name = "RetMsg" type = "*char" referto = "strlen" id = "3" required = "0"/>
+    </struct>
+	<struct name = "RemoveVirtualBankCardRequest">
+		<field name = "BaseRequest" type="BaseRequest" id="1" />
+		<field name = "CardID" type = "uint32" id = "2" required="0" />
+		<field name = "BankType" type = "*char" referto="strlen" id = "3" />
+	</struct>
+	<struct name = "RemoveVirtualBankCardResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+		<field name = "RetCode" type = "int32" id = "2" required = "0"/>
+		<field name = "RetMsg" type = "*char" referto = "strlen" id = "3" required = "0"/>
+	</struct>
+
+	<struct name = "GetOfflinePayInfoRequest">
+		<field name = "BaseRequest" type="BaseRequest" id="1" />
+		<field name = "Longtitude" type = "double" id = "2" />
+		<field name = "Latitude" type = "double"  id = "3" />
+	</struct>
+	<struct name = "GetOfflinePayInfoResponse">
+		<field name ="BaseResponse" type="BaseResponse" id="1" />
+		<field name = "RetCode" type = "int32" id = "2" required = "0"/>
+		<field name = "RetMsg" type = "*char" referto = "strlen" id = "3" required = "0"/>
+        <field name = "RetText" type = "*char" referto = "strlen" id = "4" required = "0" />
+        <field name = "OpenRetText" type = "*char" referto = "strlen" id = "5" required = "0" />
+	</struct>
+	<struct name = "OfflinePayConfirmRequest">
+		<field name = "BaseRequest" type="BaseRequest" id="1" />
+		<field name = "ButtonType" type = "int32" id = "2" />
+		<field name = "Id" type = "*char" referto = "strlen" id = "3" />
+	</struct>
+	<struct name = "OfflinePayConfirmResponse">
+		<field name ="BaseResponse" type="BaseResponse" id="1" />
+        <field name = "RetText" type = "*char" referto = "strlen" id = "2" required = "0" />
+	</struct>
+	<struct name = "SetMainBankCardRequest">
+		<field name = "BaseRequest" type="BaseRequest" id="1" />
+		<field name = "BindSerial" type = "*char" referto = "strlen" id = "2" />
+	</struct>
+	<struct name = "SetMainBankCardResponse">
+		<field name ="BaseResponse" type="BaseResponse" id="1" />
+	</struct>
+</metainfo>

@@ -1,0 +1,66 @@
+<metainfo prefix="MM" filename="MMVoicePrint" magic="1000">
+	
+	<struct name="VoicePieceCtx">
+		<field name="StartPos" type="uint32" id="1"/>
+		<field name="PieceLen" type="uint32" id="2"/>
+		<field name="PieceFlag" type="uint32" id="3"/>
+		<field name="PieceData" type="SKBuiltinBuffer_t" id="4" />
+	</struct>
+	
+	<struct name="ResourceCtx">
+		<field name="ResType" type="uint32" id="1"/>
+		<field name="ResId" type="uint32" id="2"/>
+		<field name="ResWhichPart" type="uint32" id="3"/>
+		<field name="ResData" type="SKBuiltinBuffer_t" id="4" />
+	</struct>
+	
+	<struct name="GetVoicePrintResourceRequest">
+		<field name="BaseRequest"	type="BaseRequest"	id="1" />
+		<field name="ResScence"		type="uint32"		id="2" />
+	</struct>
+
+	<struct name="GetVoicePrintResourceResponse">
+		<field name="BaseResponse"	type="BaseResponse"	id="1"/>
+		<field name="ResourceData"  type="ResourceCtx" id="2"/>
+	</struct>
+
+	<struct name="RegisterVoicePrintRequest">
+		<field name="BaseRequest"	type="BaseRequest"	id="1"/>
+		<field name="Step" type="uint32" id="2"/>
+		<field name="VoiceTicket" type="uint32" id="3"/>
+		<field name="PieceData" type="VoicePieceCtx" id="4"/>
+		<field name="ResId" type="uint32" id="5"/>
+	</struct>
+
+	<struct name="RegisterVoicePrintResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1"/>
+		<field name="ResgisterRet" type="int32" id="2"/>
+		<field name="NextStep" type="uint32" id="3"/>
+		<field name="NextPiece" type="VoicePieceCtx" id="4"/>
+		<field name="VoiceTicket" type="uint32" id="5" />
+	</struct>
+	
+	<struct name="VerifyVoicePrintRequest">
+		<field name="BaseRequest" type="BaseRequest" id="1"/>
+		<field name="Piece" type="VoicePieceCtx" id="2"/>
+		<field name="VoiceTicket" type="uint32" id="3"/>
+		<field name="ResId" type="uint32" id="4"/>
+	</struct>
+	
+	<struct name="VerifyVoicePrintResponse">
+		<field name="BaseResponse"	type="BaseResponse"	id="1"/>
+		<field name="NextPiece" 	type="VoicePieceCtx" id="2"/>
+		<field name="Result" 	type="uint32" id="3"/>
+		<field name="VoiceTicket"   type="uint32" id="4"/>
+	</struct>
+
+	<struct name="CheckVoicePrintStatusRequest">
+		 <field name="BaseRequest" type="BaseRequest" id="1"/>
+	</struct>
+	
+	<struct name="CheckVoicePrintStatusResponse">
+		 <field name="BaseResponse" type="BaseResponse" id="1"/>
+		 <field name="Status" type="uint32" id="2"/>
+	</struct>
+	
+</metainfo>

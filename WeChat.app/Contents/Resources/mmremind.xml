@@ -1,0 +1,74 @@
+
+<metainfo prefix="MM" filename="MMFav" magic="1000">
+
+	<struct name="RemindSyncRequest">
+		<field name="BaseRequest" type="BaseRequest" id="1" />
+		<field name="Selector" type="uint32" id="2" />
+		<field name="KeyBuff" type="SKBuiltinBuffer_t" id="3" />
+	</struct>
+
+	<struct name="RemindSyncResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+		<field name="CmdList" type="CmdList" id="2" />
+		<field name="KeyBuff" type="SKBuiltinBuffer_t" id="3" />
+		<field name="ContinueFlag" type="uint32" id="4" />
+	</struct>
+
+	<struct name="ModRemindCmd">
+		<field name="RemindID" type="uint32" id="1" />
+		<field name="RemindTime" type="uint64" id="2" />
+		<field name="Flag" type="uint32" id="3" />
+	</struct>
+
+	<struct name="RemindMember">
+		<field name="UserName" type="*char" referto="strlen" id="1" />
+	</struct>
+
+	<struct name="RemindItem">
+		<field name="RemindID" type="uint32" id="1" />
+		<field name="CreateTime" type="uint32" id="2" />
+		<field name="RemindTime" type="uint64" id="3" />
+		<field name="FromUser" type="*char" referto="strlen" id="4" />
+		<field name="ToUserCount" type="uint32" id="5" />
+		<field name="ToUserList" type="*RemindMember" referto="ToUserCount" id="6" />
+		<field name="Flag" type="uint32" id="7" />
+		<field name="Content" type="*char" referto="strlen" id="8" />
+	</struct>
+
+	<struct name="BatchGetRemindInfoRequest">
+		<field name="BaseRequest" type="BaseRequest" id="1" />
+		<field name="RemindIDCount" type="uint32" id="2" />
+		<field name="RemindIDList" type="*uint32" referto="Count" id="3" />
+	</struct>
+
+	<struct name="BatchGetRemindInfoResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+		<field name="RemindInfoCount" type="uint32" id="2" />
+		<field name="RemindInfoList" type="*RemindItem" referto="RemindInfoCount" id="3" />
+	</struct>
+
+	<struct name="AddRemindRequest">
+		<field name="BaseRequest" type="BaseRequest" id="1" />
+		<field name="ClientID" type="*char" referto="strlen" id="2" />
+		<field name="RemindTime" type="uint64" id="3" />
+		<field name="ToUserCount" type="uint32" id="4" />
+		<field name="ToUserList" type="*RemindMember" referto="ToUserCount" id="5" />
+		<field name="Content" type="*char" referto="strlen" id="6" />
+	</struct>
+
+	<struct name="AddRemindResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+		<filed name="RemindID" type="uint32" id="2" />
+	</struct>
+
+	<struct name="DelRemindRequest">
+		<field name="BaseRequest" type="BaseRequest" id="1" />
+		<field name="RemindID" type="uint32" id="2" />
+	</struct>
+
+	<struct name="DelRemindResponse">
+		<field name="BaseResponse" type="BaseResponse" id="1" />
+	</struct>
+	
+</metainfo>
+

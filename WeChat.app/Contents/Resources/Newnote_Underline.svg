@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>0.图标/04.笔记/icons_outlined_note_underline</title>
+    <g id="0.图标/04.笔记/icons_outlined_note_underline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.9">
+        <g id="underline" transform="translate(8.000000, 7.000000)" fill="#000000">
+            <path d="M1,4.99833453 C1,6.66097987 2.34314575,8 4,8 L4,8 L4.17593691,7.99490448 C5.74794518,7.9036074 7,6.59690238 7,4.99833453 L7,4.99833453 L7,0 L8,0 L8,5.0000567 C8,7.14222173 6.31180468,8.89108042 4.19925608,8.99510476 L4,9 C1.790861,9 0,7.20034651 0,5.0000567 L0,0 L1,0 Z" id="Combined-Shape-Copy"></path>
+            <rect id="Rectangle-10" x="0" y="10" width="8" height="1"></rect>
+        </g>
+    </g>
+</svg>

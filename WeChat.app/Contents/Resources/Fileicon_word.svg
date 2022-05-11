@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>fileicon_word </title>
+    <desc>Created with Sketch.</desc>
+    <g id="fileicon_word-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M35,38.6666667 C35,39.4030463 34.4030463,40 33.6666667,40 L6.33333333,40 C5.59695367,40 5,39.4030463 5,38.6666667 L5,1.33333333 C5,0.596953667 5.59695367,-7.52907669e-16 6.33333333,0 L25,0 L35,10 L35,38.6666667 Z" id="Combined-Shape" fill="#2C569A"></path>
+        <path d="M35,10 L26.3333333,10 C25.5969537,10 25,9.40304633 25,8.66666667 L25,0 L25,0 L35,10 Z" id="Rectangle" fill="#000000" opacity="0.200000003"></path>
+        <polygon id="W" fill="#FFFFFF" fill-rule="nonzero" points="19.8958333 22.5104167 17.5911458 30.6666667 15.6927083 30.6666667 12.6692708 19.3932292 14.7630208 19.3932292 16.7161458 27.9322917 16.7786458 27.9322917 19.0442708 19.3932292 20.8255208 19.3932292 23.0911458 27.9322917 23.1536458 27.9322917 25.1067708 19.3932292 27.2005208 19.3932292 24.1770833 30.6666667 22.2786458 30.6666667 19.9739583 22.5104167"></polygon>
+    </g>
+</svg>

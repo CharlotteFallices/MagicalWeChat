@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--weui for mac-->
+    
+    <!--name="颜色名称"-->
+    <!--#lightModeColor,#darkModeColor-->
+    <!--色值为16进制，最后两位为透明度（100%）没有不填写默认100%-->
+    
+    
+    <!--BG-->
+    <color name="BG_0">#EDEDED80,#11111180</color>
+    <color name="BG_1">#F3F3F3,#111111</color>
+    <color name="BG_2">#F7F7F7,#191919</color>
+    <color name="BG_3">#FFFFFF,#2C2C2C</color>
+    <color name="BG_4">#4C4C4C,#404040</color>
+    <color name="BG_5">#00000050,#FFFFFF50</color>
+    <color name="BG_6">#07C160,#000000</color><!--Alert专用-->
+    <color name="BG_7">#40404095,#404040</color><!--设置专用-->
+    
+    <!--FG-->
+    <color name="FG_0">#00000090,#FFFFFF80</color><!--alpha: 0.9, 0.8-->
+    <color name="FG_1">#00000070,#FFFFFF60</color><!--alpha: 0.7, 0.7-->
+    <color name="FG_2">#00000050,#FFFFFF50</color><!--alpha: 0.5, 0.5-->
+    <color name="FG_3">#00000030,#FFFFFF30</color><!--alpha: 0.3, 0.3-->
+    <color name="FG_4">#00000010,#FFFFFF10</color><!--alpha: 0.1, 0.1-->
+    <color name="FG_5">#00000008,#FFFFFF08</color><!--alpha: 0.08, 0.08-->
+    <color name="FG_6">#00000005,#FFFFFF05</color><!--alpha: 0.05, 0.05-->
+    
+    <color name="textGreen">#06AE56,#259C5C</color>
+    
+    <color name="green">#91D300,#74A800</color>
+    <color name="green_click">#82BD00</color>
+    <color name="green_hover">#A7DB33</color>
+    
+    <color name="brand">#07C160</color>
+    <color name="brand_click">#06AE56</color>
+    <color name="brand_hover">#38CD7E</color>
+    
+    <color name="lightGreen">#95EC69,#28B561</color>
+    <color name="lightGreen_click">#85D35E</color>
+    <color name="lightGreen_hover">#AAEF87</color>
+    
+    <color name="link">#576B95,#7D90A9</color>
+    <color name="link_self">#576B95,#FA5151</color><!--发送方是自己-->
+    <color name="link_click">#4E6085</color>
+    <color name="link_hover">#7888AA</color>
+    
+    <color name="red">#FA5151,#FA5151</color>
+    <color name="red_click">#E14949</color>
+    <color name="red_hover">#FB7373</color>
+    
+    <!--   -2: NSFontWeightThin-->
+    <!--   -1: NSFontWeightLight-->
+    <!--    0: NSFontWeightRegular-->
+    <!--    1: NSFontWeightMedium-->
+    <!--    2: NSFontWeightSemibold-->
+    <font name="F16">16,0</font>
+    <font name="F14">14,0</font>
+    <font name="F12">12,0</font>
+    <font name="F10">10,0</font>
+
+    <!--字体6档倍率 0.8 1 1.2 1.4 1.6 1.8-->
+    <!--标准字体 10 12 14 16-->
+    <fontclass name="Ft16">12,16,19,22,25,28</fontclass>
+    <fontclass name="Ft14">11,14,16,19,22,25</fontclass>
+    <fontclass name="Ft12">9,12,14,16,19,22</fontclass>
+    <fontclass name="Ft10">8,10,12,14,16,18</fontclass>
+    
+</resources>
