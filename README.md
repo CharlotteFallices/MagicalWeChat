@@ -1,4 +1,4 @@
-# MagicalWechat
+# MagicalWeChat
 
 ## Feature
 
