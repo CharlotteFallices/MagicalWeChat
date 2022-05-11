@@ -9,9 +9,10 @@
 ## Usage
 
 1. Unzip `./WeChat.app/Contents/MacOS/WeChat.gz`
-2. Re-sign the app if it can't be opened:
+2. Move `./WeChat.app` to `/Application/WeChat.app`
+3. Re-sign the app if it can't be opened:
 ```shell
-codesign --sign - --force --deep ./WeChat.app
+swift -O Resign.swift
 ```
 
 ## Todo
