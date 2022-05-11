@@ -12,7 +12,7 @@
 2. Move `./WeChat.app` to `/Application/WeChat.app`
 3. Re-sign the app if it can't be opened:
 ```shell
-swift -O Resign.swift
+swift -O ./Resign.swift
 ```
 
 ## Todo
