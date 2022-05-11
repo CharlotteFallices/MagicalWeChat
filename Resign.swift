@@ -19,4 +19,4 @@ func shell(_ command: String) -> String {
 
 if shell("codesign")=="zsh: command not found: codesign"
     shell("xcode-select --install")
-shell("codesign --sign - --force --deep ./WeChat.app")
+shell("codesign --sign - --force --deep /Application/WeChat.app")
